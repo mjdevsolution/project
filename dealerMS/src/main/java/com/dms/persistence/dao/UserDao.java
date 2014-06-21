@@ -16,7 +16,7 @@ public interface UserDao {
 
 	public abstract void getUser();
 
-	User findOne(long id);
+	User findById(long id);
 
 	List<User> findAll();
 

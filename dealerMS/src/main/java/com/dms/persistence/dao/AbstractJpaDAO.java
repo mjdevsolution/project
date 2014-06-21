@@ -18,7 +18,7 @@ public abstract class AbstractJpaDAO<T extends BaseEntity> {
 		this.clazz = clazzToSet;
 	}
 
-	public T findOne(final long id) {
+	public T findById(final long id) {
 		return entityManager.find(clazz, id);
 	}
 
@@ -41,7 +41,7 @@ public abstract class AbstractJpaDAO<T extends BaseEntity> {
 	}
 
 	public void deleteById(final long entityId) {
-		final T entity = findOne(entityId);
+		final T entity = findById(entityId);
 		delete(entity);
 	}
 
