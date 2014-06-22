@@ -6,6 +6,14 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
+	<h:outputStylesheet name="style.css" library="css" />
+	<link href='http://fonts.googleapis.com/css?family=Belgrano'
+		rel='stylesheet' type='text/css' />
+
+	<!-- jQuery file -->
+	<script src="/resources/js/jquery.min.js"></script>
+	<script src="/resources/js/jquery.tabify.js" type="text/javascript"
+		charset="utf-8"></script>
 	<script type="text/javascript">
 		var $ = jQuery.noConflict();
 		$(function() {
@@ -17,27 +25,48 @@
 			});
 		});
 	</script>
-
 </h:head>
-<h:head>
-	<script type="text/javascript">
-		var $ = jQuery.noConflict();
-		$(function() {
-			$('#tabsmenu').tabify();
-			$(".toggle_container").hide();
-			$(".trigger").click(function() {
-				$(this).toggleClass("active").next().slideToggle("slow");
-				return false;
-			});
-		});
-	</script>
 
-</h:head>
 <h:body>
+	<div id="panelwrap">
 
-	<ui:composition template="/template/commonLayout.xhtml">
+		<div class="header">
+			<div class="title">
+				<a href="#">Panelo Admin</a>
+			</div>
 
-		<ui:define name="content">
+			<div class="header_right">
+				Welcome Admin, <a href="#" class="settings">Settings</a> <a href="#"
+					class="logout">Logout</a>
+			</div>
+
+			<div class="menu">
+				<ul>
+					<li><a href="#" class="selected">Main page</a></li>
+					<li><a href="#">Settings</a></li>
+					<li><a href="#">Add a category</a></li>
+					<li><a href="#">Edit categories</a></li>
+					<li><a href="#">Categories</a></li>
+					<li><a href="#">Options</a></li>
+					<li><a href="#">Admin settings</a></li>
+					<li><a href="#">Help</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="submenu">
+			<ul>
+				<li><a href="#" class="selected">settings</a></li>
+				<li><a href="#">users</a></li>
+				<li><a href="#">categories</a></li>
+				<li><a href="#">edit section</a></li>
+				<li><a href="#">templates</a></li>
+			</ul>
+		</div>
+
+		<div class="center_content">
+
 			<div id="right_wrap">
 				<div id="right_content">
 					<h2>Tables section</h2>
@@ -319,13 +348,16 @@
 
 
 			<div class="clear"></div>
-			<!--end of center_content-->
-		</ui:define>
+		</div>
+		<!--end of center_content-->
 
+		<div class="footer">
+			Panelo - Free Admin Template by <a
+				href="#" target="_blank">CSSTemplatesMarket</a>
+		</div>
 
+	</div>
 
-	</ui:composition>
 
 </h:body>
-
 </html>
