@@ -667,3 +667,8 @@ input.loginform_submit {
 	line-height: 50px;
 	padding: 0 0 0 20px;
 }
+
+.menucbar {
+	clear: both;
+	padding: 10px 10px 10px 10px;
+}
