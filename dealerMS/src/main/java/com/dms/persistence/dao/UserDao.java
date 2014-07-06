@@ -28,4 +28,6 @@ public interface UserDao {
 
 	void deleteById(long entityId);
 
+	public User findByUsername(final String username);
+
 }

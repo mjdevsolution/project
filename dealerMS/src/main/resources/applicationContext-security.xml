@@ -10,18 +10,21 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 		<intercept-url pattern="/login" access="permitAll" />
 		<intercept-url pattern="/logout" access="permitAll" />
 		<intercept-url pattern="/accessdenied" access="permitAll" />
-		<intercept-url pattern="/**" access="hasRole('USER')" />
+		<intercept-url pattern="/user" access="hasRole('ADMIN')" />
+		<intercept-url pattern="/**" access="hasAnyRole('ADMIN','USER')" />
 		<form-login login-page="/login" default-target-url="/home"
 			authentication-failure-url="/accessdenied" />
 		<logout logout-success-url="/logout" />
 	</http>
 
-	<authentication-manager alias="authenticationManager">
-		<authentication-provider>
-			<user-service>
-				<user name="jeya" password="123" authorities="USER" />
-			</user-service>
+	<authentication-manager>
+		<authentication-provider user-service-ref="loginService">
+			<!-- <password-encoder hash="md5"/> -->
 		</authentication-provider>
 	</authentication-manager>
+
+	<!-- <authentication-manager alias="authenticationManager"> <authentication-provider> 
+		<user-service> <user name="jeya" password="123" authorities="USER" /> </user-service> 
+		</authentication-provider> </authentication-manager> -->
 
 </beans:beans>
