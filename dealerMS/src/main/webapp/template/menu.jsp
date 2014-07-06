@@ -9,7 +9,7 @@
 					class="arrow"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="#">Home</a></li>
+					<li><a class="" href="home">Home</a></li>
 					<li><a class="" href="#">Dashboard</a></li>
 					<li><a class="" href="#">Chat with Us</a></li>
 					<li><a class="" href="#">About Us</a></li>
@@ -20,7 +20,7 @@
 						Management</span> <span class="arrow"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="#">Wizard</a></li>
+					<li><a class="" href="user">Wizard</a></li>
 				</ul></li>
 
 			<li class="sub-menu"><a href="javascript:;" class=""> <i class="icon-tasks"></i> <span>Stock Request</span>

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application blank page.
  */
 @Controller
-public class BlankController {
+public class UserController {
 
 	// private static final Logger logger =
 	// LoggerFactory.getLogger(HomeController.class);
@@ -26,7 +26,7 @@ public class BlankController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = { "/", "/blank" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/user" }, method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		// logger.info("Welcome home! The client locale is {}.", locale);
 
@@ -38,7 +38,8 @@ public class BlankController {
 
 		model.addAttribute("serverTime", formattedDate);
 
-		return "blank";
+		return "createUser";
 	}
+	
 
 }

@@ -14,6 +14,7 @@
 
 	<properties>
 
+		<jstl.version>1.2</jstl.version>
 
 		<!-- Spring -->
 		<org.springframework.version>4.0.5.RELEASE</org.springframework.version>
@@ -84,6 +85,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- jstl for jsp page -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.sun.el</groupId>
 			<artifactId>el-ri</artifactId>
@@ -138,6 +146,19 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springframework.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springframework.security.version}</version>
 		</dependency>
 
 		<!-- persistence -->
